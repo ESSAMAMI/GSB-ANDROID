@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_consulter"
+        android:icon="@drawable/ic_file"
+        android:title="Consulter"
+        />
+
+    <item android:id="@+id/nav_saisir"
+        android:icon="@drawable/ic_create_black_24dp"
+        android:title="Saisir"
+        />
+
+    <item android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"
+        android:title="Se déconnecter"
+        />
+
+
+
+
+
+</menu>

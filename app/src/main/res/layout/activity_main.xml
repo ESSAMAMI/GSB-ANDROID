@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="fr.gsb.gsb_rv_visiteur.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/matricule"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="160dp"
+            android:textColor="#fff"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_user"
+            android:textSize="16dp"
+            android:background="#11000000"
+            android:hint=" Login"
+            android:textColorHint="#C38EF1"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/mdp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@+id/matricule"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/matricule"
+            android:layout_below="@+id/matricule"
+            android:layout_marginTop="11dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_lock"
+            android:hint=" Password"
+            android:inputType="textPassword"
+            android:textColor="#fff"
+            android:textColorHint="#C38EF1"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/connexion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/mdp"
+            android:layout_marginTop="13dp"
+            android:background="@color/ic_launcher_background"
+            android:onClick="Connexion"
+            android:text="Connexion"
+            android:textColor="#fff" />
+
+
+
+        <TextView
+            android:id="@+id/tele"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="66dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="70dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="60dp"
+            app:srcCompat="@drawable/logo" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

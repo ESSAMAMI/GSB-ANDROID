@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">GSB</string>
+    <string name="valider">VALIDER</string>
+    <string name="annuler">ANNULER</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+    <string-array name="mois">
+        <item>Janvier</item>
+        <item>Février</item>
+        <item>Mars</item>
+        <item>Avril</item>
+        <item>Mai</item>
+        <item>Juin</item>
+        <item>Juillet</item>
+        <item>Aôut</item>
+        <item>Septembre</item>
+        <item>Octobre</item>
+        <item>Novembre</item>
+        <item>Décembre</item>
+    </string-array>
+
+    <string-array name="annee">
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+    </string-array>
+    <string-array name="listePraticien">
+        <item>Mohamed</item>
+        <item>Ilona</item>
+        <item>Aicha</item>
+        <item>Lionel</item>
+        <item>Alexis</item>
+    </string-array>
+
+    <string name="ip">http://192.168.1.36:5000/%s</string>
+    <string name="ipConnexion">http://192.168.1.36:5000/connexion/%s</string>
+    <string name="ipRap">http://192.168.1.36:5000/rapport/%s</string>
+    <string name="ipResuRap">http://192.168.1.36:5000/rapport/estLu/%s</string>
+    <string name="ipPost">http://192.168.1.36:5000/InsertRv</string>
+
+</resources>

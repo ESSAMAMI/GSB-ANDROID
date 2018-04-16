@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:background="#fff"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gradient"
+        android:elevation="8dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tview"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text=" Rapport n° "
+            android:drawableLeft="@drawable/ic_insert_file_blanc"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_nomRap"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="-28dp"
+            android:layout_marginBottom="10dp"
+            android:text="Numero"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+           android:drawableLeft="@drawable/ic_system_update"
+        android:text="12/07/2018"
+        android:textSize="18dp"
+        android:textColor="#ffffff"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_pra"
+            android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
+        android:text="Momo"
+        android:textSize="16dp"
+        android:textColor="#ffffff"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vu"
+            android:layout_marginLeft="308dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>
