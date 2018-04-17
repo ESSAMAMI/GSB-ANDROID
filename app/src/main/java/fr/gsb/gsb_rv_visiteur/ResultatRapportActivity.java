@@ -161,12 +161,16 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                             //Toast.makeText(getApplicationContext(), "Rap num = " + view.getTag(), Toast.LENGTH_SHORT).show();
 
                             //Dialogue + Info Rapp
-
                             Integer intt = (Integer) view.getTag();
+                            if(intt == 0){
 
-                            if(! lesRapportsVisites.get(intt - 1).isLu()){
+                                intt = (Integer) view.getTag() + 1;
+                            }
 
-                               // Toast.makeText(ResultatRapportActivity.this, "On m'a vu ", Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), "Rap num = " + String.valueOf(i), Toast.LENGTH_SHORT).show();
+                            if(!lesRapportsVisites.get(i).isLu()){
+
+                               Toast.makeText(ResultatRapportActivity.this, "On m'a vu ", Toast.LENGTH_LONG).show();
 
                                 try {
 
@@ -174,7 +178,6 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                                     final String urlUpdate = String.format(getResources().getString(R.string.ipResuRap), id);
 
                                     Response.Listener<String> ecouteurUpdate = new Response.Listener<String>() {
-
 
                                         @Override
                                         public void onResponse(String response) {
@@ -192,16 +195,19 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                                     RequestQueue requestQueue = Volley.newRequestQueue(ResultatRapportActivity.this);
                                     requestQueue.add(stringRequest);
 
-                                    } catch (UnsupportedEncodingException e) {
+                                } catch (UnsupportedEncodingException e) {
                                     e.printStackTrace();
                                 }
 
+                            }else{
+
+                                Toast.makeText(ResultatRapportActivity.this, "Je suis la faut voir qui ne va pas ", Toast.LENGTH_LONG).show();
                             }
 
                             //Toast.makeText(getApplicationContext(), String.valueOf(intt), Toast.LENGTH_SHORT).show();
 
                             new AlertDialog.Builder(ResultatRapportActivity.this)
-                                    .setTitle("RAPPORT " + String.valueOf(view.getTag()))
+                                    .setTitle("RAPPORT " + String.valueOf(intt))
                                     .setMessage("..............")
                                     .setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                         @Override

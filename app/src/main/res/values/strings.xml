@@ -45,5 +45,6 @@
     <string name="ipRap">http://192.168.1.36:5000/rapport/%s</string>
     <string name="ipResuRap">http://192.168.1.36:5000/rapport/estLu/%s</string>
     <string name="ipPost">http://192.168.1.36:5000/InsertRv</string>
+    <string name="count">http://192.168.1.36:5000/%s</string>
 
 </resources>

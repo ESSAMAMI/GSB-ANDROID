@@ -1,0 +1,4 @@
+#Mon Apr 16 23:15:53 CEST 2018
+base.0=F\:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\4
+path.0=classes.dex
+renamed.0=classes.dex

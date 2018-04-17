@@ -29,6 +29,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
@@ -51,6 +52,7 @@ import fr.gsb.gsb_entites.Coefeciant;
 import fr.gsb.gsb_entites.Medicament;
 import fr.gsb.gsb_entites.Motif;
 import fr.gsb.gsb_entites.Praticien;
+import fr.gsb.gsb_technique.DateFr;
 import fr.gsb.gsb_technique.DatePickerFragment;
 import fr.gsb.gsb_technique.Session;
 import fr.gsb.gsb_test_fonctionnel.InsertRapp;
@@ -70,6 +72,7 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
     private int idCoef ;
     private  int idPra ;
     private int idMot;
+    List<String> stringId = new ArrayList<String>() ;
     private List<Medicament> lesMedicaments = new ArrayList<Medicament>();
 
     Spinner listCoef, listPra, listMotif ;
@@ -117,9 +120,6 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
                             e.printStackTrace();
                         }
                     }
-                    //Toast.makeText(SaisirRapportActivity.this, String.valueOf(lesMedicaments.size()), Toast.LENGTH_LONG).show();
-
-                    //listItems = getResources().getStringArray(R.array.mois);
 
 
                     /* J'INDEX MON TABLEAU */
@@ -482,24 +482,26 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
 
     public void getData(View v){
 
+
+        /************ POST *************/
+
         bilan = bilanTv.getText().toString();
 
-        /*Toast.makeText(SaisirRapportActivity.this, dateVisite,Toast.LENGTH_LONG).show();
-        Toast.makeText(SaisirRapportActivity.this, String.valueOf(idCoef),Toast.LENGTH_SHORT).show();
-        Toast.makeText(SaisirRapportActivity.this, String.valueOf(idPra),Toast.LENGTH_SHORT).show();
-        Toast.makeText(SaisirRapportActivity.this, String.valueOf(idMot), Toast.LENGTH_SHORT).show();
-        Toast.makeText(SaisirRapportActivity.this, bilan ,Toast.LENGTH_LONG).show();*/
+        DateFr dateFr = new DateFr();
+        String dateRedac = String.valueOf(dateFr.getAnnee()+"-"+dateFr.getMois()+"-"+dateFr.getJour());
 
         RapportIntent rapportIntent = new RapportIntent(dateVisite, idCoef, idPra, idMot, bilan);
+
         ArrayList<MedicamentIntent> medicamentIntents = new ArrayList<MedicamentIntent>();
         for (int i =0; i < arrayMedocs.size(); i++) {
 
             medicamentIntents.add(new MedicamentIntent(arrayMedocs.get(i).getDepotLegal(), arrayMedocs.get(i).getNomCommercial()));
-
+            Toast.makeText(SaisirRapportActivity.this, medicamentIntents.get(i).getDepot(), Toast.LENGTH_LONG).show();
         }
 
-        final InsertRapp insertRapp = new InsertRapp("b13", 20, 32, "Bilan positif", "2018-04-10",
-                2, "2018-04-05", 0, 2
+        final InsertRapp insertRapp = new InsertRapp(Session.getSession().getLeVisiteur().getMatricule(),
+                26, rapportIntent.getIdPra(), rapportIntent.getBilan(), dateRedac,
+                rapportIntent.getIdCoef(), dateVisite, 0, rapportIntent.getIdMot()
                 );
 
         GsonBuilder gsonBuilder = new GsonBuilder();
@@ -537,14 +539,10 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
 
         queue.add(strRequest);
 
-
-        /*Intent intention = new Intent(this, EchantillonActivity.class);
-        intention.putExtra("donnee", rapportIntent);
+        /************ END POST *************/
+        Intent intention = new Intent(this, EchantillonActivity.class);
         intention.putExtra("echantillon", medicamentIntents);
-        startActivity(intention);*/
-
-
-
+        startActivity(intention);
     }
 
 

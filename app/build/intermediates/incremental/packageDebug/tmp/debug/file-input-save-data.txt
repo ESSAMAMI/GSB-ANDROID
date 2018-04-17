@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Tue Apr 03 19:07:07 CEST 2018
+1.base=F\:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=F\:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+1.path=classes.dex

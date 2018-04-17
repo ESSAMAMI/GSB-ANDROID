@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -54,8 +55,10 @@ public class RapportVisiteAdapter extends BaseAdapter {
         TextView tvVu = (TextView)v.findViewById(R.id.vu);
 
         //Set Text for TextView
+
+        int mois  = lesRapportsVisite.get(i).getDateRedaction().get(Calendar.MONTH) + 1;
         String date = lesRapportsVisite.get(i).getDateRedaction().get(Calendar.DAY_OF_MONTH)+"/"+
-                lesRapportsVisite.get(i).getDateRedaction().get(Calendar.MONTH) + 1 +"/"+
+                String.valueOf(mois) +"/"+
                 lesRapportsVisite.get(i).getDateRedaction().get(Calendar.YEAR)
                 ;
 
