@@ -51,7 +51,7 @@ public class ConsulterActivity extends AppCompatActivity implements NavigationVi
         listeAnnee = (Spinner) findViewById(R.id.spinner_annee);
 
         DateFr dateFr = new DateFr();
-        for (int i = 0 ; i<10 ;i++){
+        for (int i = 0 ; i < 10 ; i++){
 
             dateAnnee.add(new Integer(dateFr.getAnnee() - i));
         }

@@ -12,11 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import fr.gsb.gsb_adapter.EchantillonAdapter;
 import fr.gsb.gsb_technique.Session;
 import fr.gsb.gsb_utile.MedicamentIntent;
 import fr.gsb.gsb_utile.RapportIntent;
@@ -25,20 +28,22 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
 
     private DrawerLayout drawerLayout ;
     private ActionBarDrawerToggle toggle ;
+    private EchantillonAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_echantillon);
+        final ListView lvEchantillon = (ListView) findViewById(R.id.listeView_medocs);
 
         Intent intent = getIntent();
 
         /* MES DONNES POUR CREER UN RAPPORT + OFFRIR*/
-        RapportIntent rapportIntent = intent.getParcelableExtra("donnee");
         ArrayList<MedicamentIntent> medicamentIntents = intent.getParcelableArrayListExtra("echantillon");
 
 
-        //Toast.makeText(EchantillonActivity.this, medicamentIntents.toString(), Toast.LENGTH_LONG ).show();
+        Toast.makeText(EchantillonActivity.this, medicamentIntents.toString(), Toast.LENGTH_LONG ).show();
 
         /* ICI A FINIR */
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigationView);
@@ -56,6 +61,15 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        adapter = new EchantillonAdapter(EchantillonActivity.this, medicamentIntents);
+        lvEchantillon.setAdapter(adapter);
+        lvEchantillon.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Toast.makeText(getApplicationContext(), "Medocs tag = " + view.getTag(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

@@ -15,7 +15,6 @@ public class MedicamentIntent implements Parcelable {
 
     public MedicamentIntent(){
 
-
     }
 
     protected MedicamentIntent(Parcel in) {
