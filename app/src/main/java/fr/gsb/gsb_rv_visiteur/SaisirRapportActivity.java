@@ -149,6 +149,7 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
                                         if(!integers.contains(position)){
 
                                             integers.add(position);
+
                                         }else{
 
                                             integers.remove(position);
@@ -496,11 +497,11 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
         for (int i =0; i < arrayMedocs.size(); i++) {
 
             medicamentIntents.add(new MedicamentIntent(arrayMedocs.get(i).getDepotLegal(), arrayMedocs.get(i).getNomCommercial()));
-            Toast.makeText(SaisirRapportActivity.this, medicamentIntents.get(i).getDepot(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(SaisirRapportActivity.this, medicamentIntents.get(i).getDepot(), Toast.LENGTH_LONG).show();
         }
 
         final InsertRapp insertRapp = new InsertRapp(Session.getSession().getLeVisiteur().getMatricule(),
-                26, rapportIntent.getIdPra(), rapportIntent.getBilan(), dateRedac,
+                0, rapportIntent.getIdPra(), rapportIntent.getBilan(), dateRedac,
                 rapportIntent.getIdCoef(), dateVisite, 0, rapportIntent.getIdMot()
                 );
 
@@ -516,7 +517,7 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
                     @Override
                     public void onResponse(String response)
                     {
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener()
@@ -543,6 +544,7 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
         Intent intention = new Intent(this, EchantillonActivity.class);
         intention.putExtra("echantillon", medicamentIntents);
         startActivity(intention);
+
     }
 
 

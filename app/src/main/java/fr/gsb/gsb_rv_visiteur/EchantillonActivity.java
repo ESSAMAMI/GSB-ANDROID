@@ -1,25 +1,34 @@
 package fr.gsb.gsb_rv_visiteur;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import fr.gsb.gsb_adapter.EchantillonAdapter;
+import fr.gsb.gsb_entites.Medicament;
 import fr.gsb.gsb_technique.Session;
 import fr.gsb.gsb_utile.MedicamentIntent;
 import fr.gsb.gsb_utile.RapportIntent;
@@ -29,8 +38,10 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
     private DrawerLayout drawerLayout ;
     private ActionBarDrawerToggle toggle ;
     private EchantillonAdapter adapter;
+    private List<Integer> quantite = new ArrayList<Integer>();
+    private List<MedicamentIntent> lesMedocs = new ArrayList<MedicamentIntent>();
 
-
+    private int qte = 0 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +51,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         Intent intent = getIntent();
 
         /* MES DONNES POUR CREER UN RAPPORT + OFFRIR*/
-        ArrayList<MedicamentIntent> medicamentIntents = intent.getParcelableArrayListExtra("echantillon");
+        final ArrayList<MedicamentIntent> medicamentIntents = intent.getParcelableArrayListExtra("echantillon");
 
 
         Toast.makeText(EchantillonActivity.this, medicamentIntents.toString(), Toast.LENGTH_LONG ).show();
@@ -61,15 +72,80 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        adapter = new EchantillonAdapter(EchantillonActivity.this, medicamentIntents);
-        lvEchantillon.setAdapter(adapter);
-        lvEchantillon.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        /*********** ICI JE CRÉE MA LISTE SPINNER ***********/
 
-                Toast.makeText(getApplicationContext(), "Medocs tag = " + view.getTag(), Toast.LENGTH_SHORT).show();
+
+        class EchantillonItemAdapter extends ArrayAdapter<MedicamentIntent> {
+
+            private  ArrayAdapter<Integer> arrayAdapter ;
+
+            EchantillonItemAdapter(Activity contexte, ArrayAdapter<Integer> arrayAdapter){
+
+                super(contexte, R.layout.item_echantillon, medicamentIntents);
+                this.arrayAdapter = arrayAdapter;
             }
-        });
+
+
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+                View ligneItem = convertView;
+                if(ligneItem == null){
+
+                    LayoutInflater convertisseur = getLayoutInflater();
+                    ligneItem = convertisseur.inflate(R.layout.item_echantillon, parent, false);
+
+                }
+
+                TextView tvEchantillon = (TextView) ligneItem.findViewById(R.id.ech);
+                tvEchantillon.setText(medicamentIntents.get(position).getNom());
+
+
+                Spinner spinnerQte = (Spinner) ligneItem.findViewById(R.id.spinner_echa_qua);
+
+                /*ArrayAdapter<Integer> aQ = new ArrayAdapter<Integer>(EchantillonActivity.this, R.layout.spinner_item, getQte() );
+                aQ.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);*/
+                spinnerQte.setAdapter(arrayAdapter);
+
+                int getQte = medicamentIntents.get(position).getQte();
+                spinnerQte.setSelection(getQte);
+                spinnerQte.setTag(position);
+
+                spinnerQte.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int qteSelected, long l) {
+
+                        Integer getPositionMedocs = (Integer)((Spinner) view.getParent()).getTag();
+
+                        /*Toast.makeText(EchantillonActivity.this, "Medocs est => "+medicamentIntents.get(getPositionMedocs).getNom() +"Qte =>"+
+                                String.valueOf(qteSelected + 1), Toast.LENGTH_LONG).show();*/
+
+                        medicamentIntents.get(getPositionMedocs).setQte(qteSelected + 1);
+                        Toast.makeText(EchantillonActivity.this, String.valueOf(medicamentIntents.toString()), Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        Toast.makeText(EchantillonActivity.this, "BAH RIEN", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                return ligneItem ;
+            }
+        }
+
+        for (int i =1; i < 6 ; i++){
+
+            quantite.add(i);
+        }
+
+        ArrayAdapter<Integer> aQ = new ArrayAdapter<Integer>(EchantillonActivity.this, R.layout.spinner_item, quantite);
+        aQ.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        EchantillonItemAdapter echantillonItemAdapter = new EchantillonItemAdapter(EchantillonActivity.this, aQ);
+        lvEchantillon.setAdapter(echantillonItemAdapter);
+
     }
 
 
@@ -86,7 +162,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        //Toast.makeText(AccueilActivity.this, "Hey", Toast.LENGTH_LONG).show();
+
         switch (item.getItemId()){
 
             case R.id.nav_consulter:
@@ -112,4 +188,6 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         }
         return false;
     }
+
+
 }

@@ -3563,7 +3563,7 @@ public final class R {
     public static final int design_navigation_view=0x7f09003e;
     public static final int disableHome=0x7f09003f;
     public static final int drawerLayout=0x7f090040;
-    public static final int echantillon=0x7f090041;
+    public static final int ech=0x7f090041;
     public static final int edit_query=0x7f090042;
     public static final int ehantillon=0x7f090043;
     public static final int end=0x7f090044;

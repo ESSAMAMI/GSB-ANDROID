@@ -19,12 +19,11 @@
         android:elevation="8dp"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/echantillon"
+            android:id="@+id/ech"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text=" Echan"
-            android:drawableLeft="@drawable/ic_insert_file_blanc"
+            android:text=""
             android:textColor="#ffffff"
             android:textSize="20dp" />
 

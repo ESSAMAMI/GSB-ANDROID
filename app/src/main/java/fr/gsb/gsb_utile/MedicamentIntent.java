@@ -7,6 +7,13 @@ public class MedicamentIntent implements Parcelable {
 
     private String depot ;
     private String nom;
+    private int qte ;
+
+    public MedicamentIntent(String depot, String nom, int qte) {
+        this.depot = depot;
+        this.nom = nom;
+        this.qte = qte;
+    }
 
     public MedicamentIntent(String depot, String nom) {
         this.depot = depot;
@@ -61,8 +68,24 @@ public class MedicamentIntent implements Parcelable {
         parcel.writeString(nom);
     }
 
+    public int getQte() {
+        return qte;
+    }
+
+    public void setQte(int qte) {
+        this.qte = qte;
+    }
+
+    public static Creator<MedicamentIntent> getCREATOR() {
+        return CREATOR;
+    }
+
     @Override
     public String toString() {
-        return depot;
+        return "MedicamentIntent{" +
+                "depot='" + depot + '\'' +
+                ", nom='" + nom + '\'' +
+                ", qte=" + qte +
+                '}';
     }
 }
