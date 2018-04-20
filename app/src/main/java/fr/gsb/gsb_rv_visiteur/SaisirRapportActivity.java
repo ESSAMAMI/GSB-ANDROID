@@ -163,12 +163,15 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
                                 public void onClick(DialogInterface dialogInterface, int wich) {
                                     String item = "";
                                     for (int i = 0; i <integers.size(); i++){
-                                        item = item +"-"+lesMedicaments.get(integers.get(i)).getDepotLegal();
+                                        item = item +"-"+lesMedicaments.get(integers.get(i)).getNomCommercial();
 
-                                        arrayMedocs.add(new Medicament(lesMedicaments.get(i).getDepotLegal(), lesMedicaments.get(i).getNomCommercial()));
+                                        arrayMedocs.add(new Medicament(lesMedicaments.get(integers.get(i)).getDepotLegal(),
+                                                lesMedicaments.get(integers.get(i)).getNomCommercial()));
+
+                                        //Toast.makeText(SaisirRapportActivity.this, item, Toast.LENGTH_SHORT).show();
                                     }
 
-                                    //Toast.makeText(SaisirRapportActivity.this, item, Toast.LENGTH_SHORT).show();
+
                                 }
                             });
 
@@ -497,7 +500,7 @@ public class SaisirRapportActivity extends AppCompatActivity implements Navigati
         for (int i =0; i < arrayMedocs.size(); i++) {
 
             medicamentIntents.add(new MedicamentIntent(arrayMedocs.get(i).getDepotLegal(), arrayMedocs.get(i).getNomCommercial()));
-            //Toast.makeText(SaisirRapportActivity.this, medicamentIntents.get(i).getDepot(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(SaisirRapportActivity.this, medicamentIntents.get(i).getNom(), Toast.LENGTH_LONG).show();
         }
 
         final InsertRapp insertRapp = new InsertRapp(Session.getSession().getLeVisiteur().getMatricule(),

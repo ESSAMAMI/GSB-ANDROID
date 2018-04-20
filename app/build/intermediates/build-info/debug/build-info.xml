@@ -5,24 +5,24 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="SYNTHETIC_CONSTRUCTOR_CHANGE"
     plugin-version="3.1.0"
-    timestamp="1524236677206"
+    timestamp="1524241250607"
     token="-1587022087379770420"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="908" />
+        duration="749" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="66" />
+        duration="112" />
     <task
         name="verifier"
-        duration="10" />
+        duration="88" />
 
     <artifact
         location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
@@ -80,8 +80,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1524236677206"
+        ir-eligibility="SYNTHETIC_CONSTRUCTOR_CHANGE"
+        timestamp="1524241250607"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"

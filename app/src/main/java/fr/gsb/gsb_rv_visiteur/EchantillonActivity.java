@@ -215,7 +215,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
 
             }
         });
-        
+
 
     }
 
