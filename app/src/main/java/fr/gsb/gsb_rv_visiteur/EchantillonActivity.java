@@ -14,23 +14,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import fr.gsb.gsb_adapter.EchantillonAdapter;
 import fr.gsb.gsb_entites.Medicament;
 import fr.gsb.gsb_technique.Session;
 import fr.gsb.gsb_utile.MedicamentIntent;
+import fr.gsb.gsb_utile.Offrir;
 import fr.gsb.gsb_utile.RapportIntent;
 
 public class EchantillonActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -47,7 +61,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_echantillon);
         final ListView lvEchantillon = (ListView) findViewById(R.id.listeView_medocs);
-
+        final Button valider = (Button) findViewById(R.id.validerEchantillon);
         Intent intent = getIntent();
 
         /* MES DONNES POUR CREER UN RAPPORT + OFFRIR*/
@@ -122,7 +136,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
                                 String.valueOf(qteSelected + 1), Toast.LENGTH_LONG).show();*/
 
                         medicamentIntents.get(getPositionMedocs).setQte(qteSelected + 1);
-                        Toast.makeText(EchantillonActivity.this, String.valueOf(medicamentIntents.toString()), Toast.LENGTH_LONG).show();
+
                     }
 
                     @Override
@@ -145,6 +159,63 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         aQ.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         EchantillonItemAdapter echantillonItemAdapter = new EchantillonItemAdapter(EchantillonActivity.this, aQ);
         lvEchantillon.setAdapter(echantillonItemAdapter);
+
+        valider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Toast.makeText(EchantillonActivity.this, String.valueOf(medicamentIntents.toString()), Toast.LENGTH_LONG).show();
+
+                GsonBuilder gsonBuilder = new GsonBuilder();
+                final Gson gson = gsonBuilder.create();
+                List<Medicament> medicaments = new ArrayList<Medicament>();
+
+                final List<Offrir> offrirs = new ArrayList<Offrir>();
+                for (int i = 0 ; i < medicamentIntents.size(); i++){
+
+                    offrirs.add(new Offrir(Session.getSession().getLeVisiteur().getMatricule(),
+                            0, medicamentIntents.get(i).getDepot(), medicamentIntents.get(i).getQte(), medicamentIntents.size()));
+                }
+                RequestQueue queue = Volley.newRequestQueue(EchantillonActivity.this);
+                String url = getResources().getString(R.string.offrir);
+
+                StringRequest strRequest = new StringRequest(Request.Method.POST, url,
+                        new Response.Listener<String>()
+                        {
+                            @Override
+                            public void onResponse(String response)
+                            {
+                                Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                            }
+                        },
+                        new Response.ErrorListener()
+                        {
+                            @Override
+                            public void onErrorResponse(VolleyError error)
+                            {
+                                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                {
+                    @Override
+                    protected Map<String, String> getParams()
+                    {
+                        Map<String, String> params = new HashMap<String, String>(offrirs.size());
+                        for (int i = 0 ; i < offrirs.size(); i++) {
+
+                            params.put("medicament" + i, gson.toJson(offrirs.get(i)));
+
+                        }
+
+                        return params;
+                    }
+                };
+
+                queue.add(strRequest);
+
+            }
+        });
+        
 
     }
 
@@ -188,6 +259,8 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         }
         return false;
     }
+
+
 
 
 }

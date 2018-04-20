@@ -1856,6 +1856,10 @@
         "source": "C:\\Users\\Electro Depot\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\edceae0907ae4394025549eb3cf14db1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pill.png.flat",
+        "source": "F:\\2017\\SLAM5\\workspace\\app\\src\\main\\res\\drawable\\pill.png"
+    },
+    {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
         "source": "C:\\Users\\Electro Depot\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\64bd87a898654e9bd64dae1c171e463e\\res\\layout\\notification_template_big_media_narrow.xml"
     },

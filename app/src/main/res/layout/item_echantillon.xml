@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text=""
+            android:drawableLeft="@drawable/pill"
             android:textColor="#ffffff"
             android:textSize="20dp" />
 

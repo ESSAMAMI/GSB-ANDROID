@@ -3494,8 +3494,9 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f080080;
     public static final int notification_tile_bg=0x7f080081;
     public static final int notify_panel_notification_icon_bg=0x7f080082;
-    public static final int tooltip_frame_dark=0x7f080083;
-    public static final int tooltip_frame_light=0x7f080084;
+    public static final int pill=0x7f080083;
+    public static final int tooltip_frame_dark=0x7f080084;
+    public static final int tooltip_frame_light=0x7f080085;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
@@ -3706,12 +3707,13 @@ public final class R {
     public static final int uniform=0x7f0900cd;
     public static final int up=0x7f0900ce;
     public static final int useLogo=0x7f0900cf;
-    public static final int view_offset_helper=0x7f0900d0;
-    public static final int visible=0x7f0900d1;
-    public static final int vu=0x7f0900d2;
-    public static final int withText=0x7f0900d3;
-    public static final int wrap=0x7f0900d4;
-    public static final int wrap_content=0x7f0900d5;
+    public static final int validerEchantillon=0x7f0900d0;
+    public static final int view_offset_helper=0x7f0900d1;
+    public static final int visible=0x7f0900d2;
+    public static final int vu=0x7f0900d3;
+    public static final int withText=0x7f0900d4;
+    public static final int wrap=0x7f0900d5;
+    public static final int wrap_content=0x7f0900d6;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f0a0000;
@@ -3854,15 +3856,16 @@ public final class R {
     public static final int ipPost=0x7f0e0028;
     public static final int ipRap=0x7f0e0029;
     public static final int ipResuRap=0x7f0e002a;
-    public static final int open=0x7f0e002b;
-    public static final int password_toggle_content_description=0x7f0e002c;
-    public static final int path_password_eye=0x7f0e002d;
-    public static final int path_password_eye_mask_strike_through=0x7f0e002e;
-    public static final int path_password_eye_mask_visible=0x7f0e002f;
-    public static final int path_password_strike_through=0x7f0e0030;
-    public static final int search_menu_title=0x7f0e0031;
-    public static final int status_bar_notification_info_overflow=0x7f0e0032;
-    public static final int valider=0x7f0e0033;
+    public static final int offrir=0x7f0e002b;
+    public static final int open=0x7f0e002c;
+    public static final int password_toggle_content_description=0x7f0e002d;
+    public static final int path_password_eye=0x7f0e002e;
+    public static final int path_password_eye_mask_strike_through=0x7f0e002f;
+    public static final int path_password_eye_mask_visible=0x7f0e0030;
+    public static final int path_password_strike_through=0x7f0e0031;
+    public static final int search_menu_title=0x7f0e0032;
+    public static final int status_bar_notification_info_overflow=0x7f0e0033;
+    public static final int valider=0x7f0e0034;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0f0000;
