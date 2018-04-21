@@ -1,11 +1,13 @@
 package fr.gsb.gsb_rv_visiteur;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -33,7 +35,7 @@ import fr.gsb.gsb_modele.ModeleGsb;
 import fr.gsb.gsb_technique.Session;
 import fr.gsb.gsb_technique.Singleton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     Button valider ;
     TextView output ;
     EditText matricule, mdp ;
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         valider = findViewById(R.id.connexion);
 

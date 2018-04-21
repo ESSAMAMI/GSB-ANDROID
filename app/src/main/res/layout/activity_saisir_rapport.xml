@@ -19,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/gradient"
+            android:background="@drawable/coversearch"
             android:elevation="8dp"
             android:orientation="vertical">
 
@@ -31,7 +31,7 @@
                 android:layout_marginTop="20dp"
                 android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
                 android:text=""
-                android:textColor="#ffffff"
+                android:textColor="#c6c6c6"
                 android:textSize="18dp" />
 
             <Button
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="-34dp"
-                android:background="@color/ic_launcher_background"
+                android:background="@color/colorPrimary"
                 android:padding="10dp"
                 android:text="Date visite"
                 android:textColor="#ffffff" />
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="57dp"
-                android:background="@color/ic_launcher_background"
+                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:text="Echantillon" />
 
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="57dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/ic_launcher_background"
+                android:background="@color/colorPrimary"
                 android:text="Suivant"
                 android:onClick="getData"
                 android:textColor="#ffffff" />

@@ -156,7 +156,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         }
 
         ArrayAdapter<Integer> aQ = new ArrayAdapter<Integer>(EchantillonActivity.this, R.layout.spinner_item, quantite);
-        aQ.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        aQ.setDropDownViewResource(R.layout.spinner_quantite);
         EchantillonItemAdapter echantillonItemAdapter = new EchantillonItemAdapter(EchantillonActivity.this, aQ);
         lvEchantillon.setAdapter(echantillonItemAdapter);
 

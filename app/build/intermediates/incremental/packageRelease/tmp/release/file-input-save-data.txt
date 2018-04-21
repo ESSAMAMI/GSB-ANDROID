@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 03 18:32:24 CEST 2018
+#Sat Apr 21 00:30:20 CEST 2018
 0.baseType=DIRECTORY
 0.base=F\:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
 0.path=classes.dex

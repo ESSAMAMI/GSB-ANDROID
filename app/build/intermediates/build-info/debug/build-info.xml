@@ -2,39 +2,41 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="24"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="xhdpi"
     format="10"
-    ir-eligibility="SYNTHETIC_CONSTRUCTOR_CHANGE"
     plugin-version="3.1.0"
-    timestamp="1524241250607"
+    timestamp="1524296701761"
     token="-1587022087379770420"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="749" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="112" />
+        duration="0" />
     <task
         name="verifier"
-        duration="88" />
+        duration="0" />
 
     <artifact
-        location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
+        location="F:\2017\SLAM5\workspace\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
         build-mode="FULL"
-        timestamp="1524232772960"
+        timestamp="1524294584657"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
@@ -65,27 +67,22 @@
         <artifact
             location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
-        <artifact
-            location="F:\2017\SLAM5\workspace\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
-        build-mode="COLD"
-        ir-eligibility="FIELD_ADDED"
-        timestamp="1524234529580"
-        verifier="COLD_SWAP_REQUESTED" >
+        build-mode="HOT_WARM"
+        timestamp="1524296525605"
+        verifier="COMPATIBLE" >
         <artifact
-            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524296525605\classes.dex"
+            type="RELOAD_DEX" />
     </build>
     <build
-        build-mode="COLD"
-        ir-eligibility="SYNTHETIC_CONSTRUCTOR_CHANGE"
-        timestamp="1524241250607"
-        verifier="COLD_SWAP_REQUESTED" >
+        build-mode="HOT_WARM"
+        timestamp="1524296701761"
+        verifier="COMPATIBLE" >
         <artifact
-            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

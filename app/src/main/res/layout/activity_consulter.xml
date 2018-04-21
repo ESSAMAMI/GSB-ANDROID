@@ -19,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/gradient"
+            android:background="@drawable/coversearch"
             android:elevation="8dp"
             android:orientation="vertical">
 
@@ -30,7 +30,8 @@
                 android:padding="19dp"
                 android:textColor="#ffffff"
                 android:textSize="19dp"
-                android:text="CONSULTER" />
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:text="  CONSULTER" />
 
             <Spinner
                 android:id="@+id/spinner_mois"
@@ -54,8 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorPrimaryDark"
-                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:background="@color/colorPrimary"
                 android:gravity="center"
                 android:onClick="search"
                 android:text="Recherche"

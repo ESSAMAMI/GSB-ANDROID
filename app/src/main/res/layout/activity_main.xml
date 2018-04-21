@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/cover"
     tools:context="fr.gsb.gsb_rv_visiteur.MainActivity">
 
 
@@ -16,41 +16,34 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <EditText
             android:id="@+id/matricule"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="160dp"
-            android:textColor="#fff"
-            android:ems="10"
-            android:drawableLeft="@drawable/ic_user"
-            android:textSize="16dp"
+            android:layout_marginTop="219dp"
             android:background="#11000000"
+            android:drawableLeft="@drawable/ic_user"
+            android:ems="10"
             android:hint=" Login"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
             android:textColorHint="#C38EF1"
-            android:inputType="textPersonName" />
+            android:textSize="16dp" />
 
         <EditText
             android:id="@+id/mdp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_alignLeft="@+id/matricule"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignStart="@+id/matricule"
             android:layout_below="@+id/matricule"
-            android:layout_marginTop="11dp"
             android:background="#11000000"
-            android:ems="10"
             android:drawableLeft="@drawable/ic_lock"
+            android:ems="10"
             android:hint=" Password"
             android:inputType="textPassword"
             android:textColor="#fff"
@@ -59,19 +52,14 @@
 
         <Button
             android:id="@+id/connexion"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/mdp"
-            android:layout_marginTop="13dp"
-            android:background="@color/ic_launcher_background"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="243dp"
+            android:background="@color/colorPrimary"
             android:onClick="Connexion"
             android:text="Connexion"
             android:textColor="#fff" />
-
 
 
         <TextView
@@ -86,12 +74,13 @@
             android:layout_marginTop="70dp" />
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
+            android:id="@+id/imageView2"
+            android:layout_width="143dp"
+            android:layout_height="65dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="60dp"
-            app:srcCompat="@drawable/logo" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="114dp"
+            android:src="@drawable/logo" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

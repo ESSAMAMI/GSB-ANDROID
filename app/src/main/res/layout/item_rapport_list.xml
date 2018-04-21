@@ -11,11 +11,11 @@
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/gradient"
+        android:background="@drawable/coversearch"
         android:elevation="8dp"
         android:orientation="vertical">
         <TextView
