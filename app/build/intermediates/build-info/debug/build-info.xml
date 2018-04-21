@@ -6,7 +6,7 @@
     density="xhdpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1524296701761"
+    timestamp="1524304179110"
     token="-1587022087379770420"
     verifier="COMPATIBLE" >
 
@@ -69,16 +69,100 @@
             type="SPLIT" />
     </build>
     <build
+        build-mode="COLD"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1524300575188"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1524302903187"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
         build-mode="HOT_WARM"
-        timestamp="1524296525605"
+        timestamp="1524303394952"
         verifier="COMPATIBLE" >
         <artifact
-            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524296525605\classes.dex"
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524303394952\classes.dex"
             type="RELOAD_DEX" />
     </build>
     <build
         build-mode="HOT_WARM"
-        timestamp="1524296701761"
+        timestamp="1524303489502"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524303489502\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1524303744588"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524303744588\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1524303819208"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524303819208\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1524303859429"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524303859429\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1524303868173"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524303868173\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1524304036504"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="F:\2017\SLAM5\workspace\app\build\intermediates\builds\debug\1524304036504\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1524304179110"
         verifier="COMPATIBLE" >
         <artifact
             location="F:\2017\SLAM5\workspace\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
