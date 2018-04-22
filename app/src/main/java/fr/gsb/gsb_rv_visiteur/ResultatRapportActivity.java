@@ -43,6 +43,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import fr.gsb.gsb_adapter.DialogueRapport;
 import fr.gsb.gsb_adapter.RapportVisiteAdapter;
 import fr.gsb.gsb_entites.Motif;
 import fr.gsb.gsb_entites.Praticien;
@@ -94,7 +95,7 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
         Integer annee = valeur.get(1);
         try {
 
-            final String rap = String.valueOf(mois) +'.'+ String.valueOf(annee);
+            final String rap = String.valueOf(mois) +'.'+ String.valueOf(annee)+'.'+Session.getSession().getLeVisiteur().getMatricule();
             String visivisi = URLEncoder.encode(String.valueOf(rap), "UTF-8");
             final String url = String.format(getResources().getString(R.string.ipRap), rap);
 
@@ -139,7 +140,7 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                                 vu = true ;
                                 //Toast.makeText(ResultatRapportActivity.this, "true = "+jsonObject.getInt("estVu"), Toast.LENGTH_SHORT).show();
                             }
-                            lesRapportsVisites.add(new RapportVisite(jsonObject.getInt("num_rap"), jsonObject.getString("rapBilan"), jsonObject.getInt("coef"),
+                            lesRapportsVisites.add(new RapportVisite(jsonObject.getInt("num_rap"), jsonObject.getString("rapBilan"), jsonObject.getString("coefLibelle"),
                                     new DateFr(jourVisite, moisVisite, anneeVisite), new DateFr(jourRedac, moisRedac, anneeRedac), vu));
 
                             lesRapportsVisites.get(i).setLeVisiteur(lesVisiteurs.get(i));
@@ -204,11 +205,14 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                                 Toast.makeText(ResultatRapportActivity.this, "Je suis la faut voir qui ne va pas ", Toast.LENGTH_LONG).show();
                             }
 
-                            //Toast.makeText(getApplicationContext(), String.valueOf(intt), Toast.LENGTH_SHORT).show();
 
-                            new AlertDialog.Builder(ResultatRapportActivity.this)
+                            Toast.makeText(getApplicationContext(), lesRapportsVisites.get(i).toString(), Toast.LENGTH_LONG).show();
+
+                            /*new AlertDialog.Builder(ResultatRapportActivity.this)
                                     .setTitle("RAPPORT " + String.valueOf(intt))
-                                    .setMessage("..............")
+                                    .setMessage("1-")
+                                    .setMessage("2-")
+
                                     .setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -217,7 +221,17 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                                         }
                                     })
                                     .setIcon(R.drawable.ic_file)
-                                    .show();
+                                    .show();*/
+
+                            /**int numRap, String bilan, String coef, String dateV, String dateR, String praticien, String motif**/
+                            DialogueRapport dialogueRapport = new DialogueRapport(lesRapportsVisites.get(i).getNumero(),
+                                    lesRapportsVisites.get(i).getBilan(),
+                                    lesRapportsVisites.get(i).getCoefConfiance(),
+                                    lesRapportsVisites.get(i).getDateVisite(),
+                                    lesRapportsVisites.get(i).getDateRedaction(),
+                                    lesRapportsVisites.get(i).getLePraticien().getNom(),
+                                    lesRapportsVisites.get(i).getLeMotif().getLibelle());
+                            dialogueRapport.show(getSupportFragmentManager(), "Dialogue");
                         }
                     });
                 }

@@ -9,7 +9,7 @@ public class RapportVisite {
 
 	private int numero ;
 	private String bilan ;
-	private int coefConfiance ;
+	private String coefConfiance ;
 	private DateFr dateVisite ;
 	private DateFr dateRedaction ;
 	private boolean lu ;
@@ -23,7 +23,7 @@ public class RapportVisite {
 		super();
 	}
 
-	public RapportVisite(int numero, String bilan, int coefConfiance,
+	public RapportVisite(int numero, String bilan, String coefConfiance,
 						 DateFr dateVisite, DateFr dateRedaction,
 			boolean lu) {
 		super();
@@ -37,7 +37,7 @@ public class RapportVisite {
 
 
 
-	public RapportVisite(int numero, String bilan, int coefConfiance, boolean lu) {
+	public RapportVisite(int numero, String bilan, String coefConfiance, boolean lu) {
 		super();
 		this.numero = numero;
 		this.bilan = bilan;
@@ -45,7 +45,7 @@ public class RapportVisite {
 		this.lu = lu;
 	}
 
-	public RapportVisite(int numero, String bilan, int coefConfiance,
+	public RapportVisite(int numero, String bilan, String coefConfiance,
 						 DateFr dateVisite, DateFr dateRedaction,
 			boolean lu, Praticien lePraticien, Visiteur leVisiteur,
 			Motif leMotif) {
@@ -77,11 +77,11 @@ public class RapportVisite {
 		this.bilan = bilan;
 	}
 
-	public int getCoefConfiance() {
+	public String getCoefConfiance() {
 		return coefConfiance;
 	}
 
-	public void setCoefConfiance(int coefConfiance) {
+	public void setCoefConfiance(String coefConfiance) {
 		this.coefConfiance = coefConfiance;
 	}
 
