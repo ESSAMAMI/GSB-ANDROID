@@ -15,7 +15,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/coversearch"
+        android:background="@drawable/bgcover"
         android:elevation="8dp"
         android:orientation="vertical">
         <TextView

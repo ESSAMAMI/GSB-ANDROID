@@ -18,6 +18,11 @@ public class Medicament {
         this.qte = qte;
     }
 
+    public Medicament(String nomCommercial, int qte) {
+        this.nomCommercial = nomCommercial;
+        this.qte = qte;
+    }
+
     public int getQte() {
         return qte;
     }

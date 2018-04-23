@@ -73,18 +73,13 @@ public class DialogueRapport extends DialogFragment {
         String newDateV = String.valueOf(jourV)+"/"+String.valueOf(moisV)+"/"+String.valueOf(anneeV);
         tvDateV.setText(newDateV);
         tvDateR.setText(newDateR);
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         builder.setIcon(R.drawable.ic_file);
         builder.setTitle("RAPPORT N° "+ String.valueOf(numRap));
 
         //ICI POUR COSUTMER LE DIALOGUE
-        builder.setView(view).setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
-            }
-        }).setNegativeButton("FERMER", new DialogInterface.OnClickListener() {
+        builder.setView(view).setNegativeButton("FERMER", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -94,7 +89,9 @@ public class DialogueRapport extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                Toast.makeText(getContext(), "Je suis la", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), "Je suis la", Toast.LENGTH_LONG).show();
+                DialogueEchantillon dialogueEchantillon = new DialogueEchantillon(numRap);
+                dialogueEchantillon.show(getFragmentManager(),"show");
             }
         });
         return builder.create();

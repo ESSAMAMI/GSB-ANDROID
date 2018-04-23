@@ -171,7 +171,7 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                             //Toast.makeText(getApplicationContext(), "Rap num = " + String.valueOf(i), Toast.LENGTH_SHORT).show();
                             if(!lesRapportsVisites.get(i).isLu()){
 
-                               Toast.makeText(ResultatRapportActivity.this, "On m'a vu ", Toast.LENGTH_LONG).show();
+                               //Toast.makeText(ResultatRapportActivity.this, "On m'a vu ", Toast.LENGTH_LONG).show();
 
                                 try {
 
@@ -202,11 +202,11 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
 
                             }else{
 
-                                Toast.makeText(ResultatRapportActivity.this, "Je suis la faut voir qui ne va pas ", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(ResultatRapportActivity.this, "Je suis la faut voir qui ne va pas ", Toast.LENGTH_LONG).show();
                             }
 
 
-                            Toast.makeText(getApplicationContext(), lesRapportsVisites.get(i).toString(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), lesRapportsVisites.get(i).toString(), Toast.LENGTH_LONG).show();
 
                             /*new AlertDialog.Builder(ResultatRapportActivity.this)
                                     .setTitle("RAPPORT " + String.valueOf(intt))
@@ -232,6 +232,7 @@ public class ResultatRapportActivity extends AppCompatActivity implements Naviga
                                     lesRapportsVisites.get(i).getLePraticien().getNom(),
                                     lesRapportsVisites.get(i).getLeMotif().getLibelle());
                             dialogueRapport.show(getSupportFragmentManager(), "Dialogue");
+
                         }
                     });
                 }

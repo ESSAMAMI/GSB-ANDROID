@@ -19,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/coversearch"
+            android:background="@drawable/bgcover"
             android:elevation="8dp"
             android:orientation="vertical">
 

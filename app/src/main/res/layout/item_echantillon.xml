@@ -18,13 +18,15 @@
         android:background="@drawable/coversearch"
         android:elevation="8dp"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/ech"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text=""
+            android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/pill"
+            android:text=""
             android:textColor="#ffffff"
             android:textSize="20dp" />
 
@@ -33,9 +35,8 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="250dp"
-            android:layout_marginTop="-25dp"
+            android:layout_marginTop="-37dp"
             />
-
 
     </LinearLayout>
 </LinearLayout>

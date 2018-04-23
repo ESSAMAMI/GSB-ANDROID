@@ -112,6 +112,10 @@
         "source": "C:\\Users\\Electro Depot\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\edceae0907ae4394025549eb3cf14db1\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialogue_echantillon.xml.flat",
+        "source": "F:\\2017\\SLAM5\\workspace\\app\\src\\main\\res\\layout\\layout_dialogue_echantillon.xml"
+    },
+    {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_create_black_24dp.png.flat",
         "source": "F:\\2017\\SLAM5\\workspace\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_create_black_24dp.png"
     },
@@ -584,6 +588,10 @@
         "source": "C:\\Users\\Electro Depot\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\edceae0907ae4394025549eb3cf14db1\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pill_color.png.flat",
+        "source": "F:\\2017\\SLAM5\\workspace\\app\\src\\main\\res\\drawable\\pill_color.png"
+    },
+    {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_check_out.png.flat",
         "source": "F:\\2017\\SLAM5\\workspace\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_check_out.png"
     },
@@ -610,6 +618,10 @@
     {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_search_black_24dp.png.flat",
         "source": "F:\\2017\\SLAM5\\workspace\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_search_black_24dp.png"
+    },
+    {
+        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_echantillon_dialogue_list.xml.flat",
+        "source": "F:\\2017\\SLAM5\\workspace\\app\\src\\main\\res\\layout\\item_echantillon_dialogue_list.xml"
     },
     {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility_off.png.flat",
@@ -1192,12 +1204,12 @@
         "source": "F:\\2017\\SLAM5\\workspace\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_power_settings_new_black_24dp.png"
     },
     {
-        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_system_update.png.flat",
-        "source": "F:\\2017\\SLAM5\\workspace\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_system_update.png"
-    },
-    {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialogue.xml.flat",
         "source": "F:\\2017\\SLAM5\\workspace\\app\\src\\main\\res\\layout\\layout_dialogue.xml"
+    },
+    {
+        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_system_update.png.flat",
+        "source": "F:\\2017\\SLAM5\\workspace\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_system_update.png"
     },
     {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_note_add_black_24dp.png.flat",
@@ -2210,6 +2222,10 @@
     {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\Electro Depot\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\edceae0907ae4394025549eb3cf14db1\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bgcover.jpg.flat",
+        "source": "F:\\2017\\SLAM5\\workspace\\app\\src\\main\\res\\drawable\\bgcover.jpg"
     },
     {
         "merged": "F:\\2017\\SLAM5\\workspace\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
