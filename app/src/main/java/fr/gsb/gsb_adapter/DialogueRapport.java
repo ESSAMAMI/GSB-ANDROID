@@ -78,18 +78,17 @@ public class DialogueRapport extends DialogFragment {
         builder.setIcon(R.drawable.ic_file);
         builder.setTitle("RAPPORT N° "+ String.valueOf(numRap));
 
-        //ICI POUR COSUTMER LE DIALOGUE
+        //ICI POUR COSTUMER LE DIALOGUE
         builder.setView(view).setNegativeButton("FERMER", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
 
             }
         }).setNeutralButton("Echantillon", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                //Toast.makeText(getContext(), "Je suis la", Toast.LENGTH_LONG).show();
+
                 DialogueEchantillon dialogueEchantillon = new DialogueEchantillon(numRap);
                 dialogueEchantillon.show(getFragmentManager(),"show");
             }

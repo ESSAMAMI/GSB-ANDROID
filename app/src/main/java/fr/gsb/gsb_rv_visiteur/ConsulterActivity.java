@@ -13,16 +13,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import fr.gsb.gsb_entites.RapportVisite;
-import fr.gsb.gsb_modele.*;
 
 import fr.gsb.gsb_technique.DateFr;
 import fr.gsb.gsb_technique.Session;
@@ -33,7 +29,7 @@ public class ConsulterActivity extends AppCompatActivity implements NavigationVi
 
     Spinner listeMois, listeAnnee ;
     final List<Integer> dateAnnee = new ArrayList<Integer>();
-    final List<Integer> dateMois = new ArrayList<Integer>();
+    final List<String> dateMois = new ArrayList<String>();
 
     private String mois ;
     private String annee ;
@@ -56,14 +52,21 @@ public class ConsulterActivity extends AppCompatActivity implements NavigationVi
             dateAnnee.add(new Integer(dateFr.getAnnee() - i));
         }
 
-        for (int i = 1; i < 13; i++){
-
-            dateMois.add(new Integer(i));
-        }
-
-
+        dateMois.add("Janvier");
+        dateMois.add("Février");
+        dateMois.add("Mars");
+        dateMois.add("Avril");
+        dateMois.add("Mai");
+        dateMois.add("Juin");
+        dateMois.add("Juillet");
+        dateMois.add("Août");
+        dateMois.add("Séptembre");
+        dateMois.add("Octobre");
+        dateMois.add("Novembre");
+        dateMois.add("Décembre");
+        
         ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<>(ConsulterActivity.this, R.layout.spinner_item, dateAnnee);
-        ArrayAdapter<Integer> arrayAdapterMois = new ArrayAdapter<>(ConsulterActivity.this, R.layout.spinner_item, dateMois);
+        ArrayAdapter<String> arrayAdapterMois = new ArrayAdapter<>(ConsulterActivity.this, R.layout.spinner_item, dateMois);
 
         listeAnnee.setAdapter(arrayAdapter);
         listeMois.setAdapter(arrayAdapterMois);
@@ -73,7 +76,7 @@ public class ConsulterActivity extends AppCompatActivity implements NavigationVi
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 annee = dateAnnee.get(i).toString();
-                Toast.makeText(ConsulterActivity.this, annee, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ConsulterActivity.this, annee, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -89,8 +92,8 @@ public class ConsulterActivity extends AppCompatActivity implements NavigationVi
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                mois = dateMois.get(i).toString();
-                Toast.makeText(ConsulterActivity.this, mois, Toast.LENGTH_SHORT).show();
+                mois = String.valueOf(i+1) ;
+                //Toast.makeText(ConsulterActivity.this, mois, Toast.LENGTH_SHORT).show();
             }
 
             @Override

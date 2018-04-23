@@ -1,6 +1,7 @@
 package fr.gsb.gsb_rv_visiteur;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -186,6 +187,13 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
                             public void onResponse(String response)
                             {
                                 Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+
+                                AlertDialog.Builder dBuilder = new AlertDialog.Builder(EchantillonActivity.this);
+                                dBuilder.setIcon(R.drawable.ic_info_outline_black_24dp);
+                                dBuilder.setTitle(" SUCCÈS");
+                                dBuilder.setMessage("Le rapport a été enrgistré avec succès ☺");
+
+                                dBuilder.show();
                             }
                         },
                         new Response.ErrorListener()
@@ -193,7 +201,12 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
                             @Override
                             public void onErrorResponse(VolleyError error)
                             {
-                                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                                AlertDialog.Builder dBuilder = new AlertDialog.Builder(EchantillonActivity.this);
+                                dBuilder.setIcon(R.drawable.ic_error);
+                                dBuilder.setTitle(" ERREUR");
+                                dBuilder.setMessage("Une erreur est survenue. Veuillez réessayer ");
+
+                                dBuilder.show();
                             }
                         })
                 {

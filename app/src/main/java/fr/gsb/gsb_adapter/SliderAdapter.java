@@ -37,7 +37,7 @@ public class SliderAdapter extends PagerAdapter {
     public String[] listTitre = {
 
             "Plate-forme APPLICATIVE",
-            "COSNULTER",
+            "CONSULTER",
             "AJOUTER",
             "PROFIL"
     };

@@ -77,7 +77,6 @@ public class DialogueEchantillon extends DialogFragment {
 
                             JSONObject jsonObject = response.getJSONObject(i);
                             medicaments.add(new Medicament(jsonObject.getString("nom"), jsonObject.getInt("quantite")));
-                            //Toast.makeText(getContext(), medicaments.get(i).toString(), Toast.LENGTH_LONG).show();
                             EchantillonDialogueAdapter echantillonDialogueAdapter = new EchantillonDialogueAdapter(getContext(), medicaments);
                             listView.setAdapter(echantillonDialogueAdapter);
 
@@ -118,8 +117,6 @@ public class DialogueEchantillon extends DialogFragment {
 
             }
         });
-
-
 
         return builder.create();
     }
