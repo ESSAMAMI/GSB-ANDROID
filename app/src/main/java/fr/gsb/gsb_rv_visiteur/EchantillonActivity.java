@@ -69,7 +69,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         final ArrayList<MedicamentIntent> medicamentIntents = intent.getParcelableArrayListExtra("echantillon");
 
 
-        Toast.makeText(EchantillonActivity.this, medicamentIntents.toString(), Toast.LENGTH_LONG ).show();
+        //Toast.makeText(EchantillonActivity.this, medicamentIntents.toString(), Toast.LENGTH_LONG ).show();
 
         /* ICI A FINIR */
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigationView);
@@ -186,7 +186,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
                             @Override
                             public void onResponse(String response)
                             {
-                                Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
 
                                 AlertDialog.Builder dBuilder = new AlertDialog.Builder(EchantillonActivity.this);
                                 dBuilder.setIcon(R.drawable.ic_info_outline_black_24dp);

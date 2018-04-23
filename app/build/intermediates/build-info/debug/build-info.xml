@@ -7,19 +7,19 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.1.0"
-    timestamp="1524487276179"
+    timestamp="1524488262696"
     token="-1587022087379770420"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="707" />
+        duration="739" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="36" />
     <task
         name="verifier"
         duration="11" />
@@ -105,7 +105,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1524487276179"
+        timestamp="1524488262696"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="F:\2017\SLAM5\workspace\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
