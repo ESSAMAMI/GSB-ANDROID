@@ -32,6 +32,7 @@
         <activity android:name="fr.gsb.gsb_rv_visiteur.ResultatRapportActivity" />
         <activity android:name="fr.gsb.gsb_rv_visiteur.SaisirRapportActivity" />
         <activity android:name="fr.gsb.gsb_rv_visiteur.EchantillonActivity" />
+        <activity android:name="fr.gsb.gsb_rv_visiteur.ModifierMdpActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

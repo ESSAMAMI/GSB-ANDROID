@@ -153,25 +153,38 @@ public class ConsulterActivity extends AppCompatActivity implements NavigationVi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        //Toast.makeText(AccueilActivity.this, "Hey", Toast.LENGTH_LONG).show();
+
         switch (item.getItemId()){
 
             case R.id.nav_consulter:
+
                 Intent consulter = new Intent(this, ConsulterActivity.class);
                 startActivity(consulter);
 
                 item.setChecked(true);
                 break;
+
             case R.id.nav_saisir:
+
                 Intent saisir = new Intent(this, SaisirRapportActivity.class);
                 startActivity(saisir);
 
                 item.setChecked(true);
                 break;
 
+            case R.id.nav_mdp:
+
+                Intent mdp = new Intent(this, ModifierMdpActivity.class);
+                startActivity(mdp);
+
+                item.setChecked(true);
+                break;
+
             case R.id.nav_logout:
+
                 Intent retour = new Intent(this, MainActivity.class);
                 startActivity(retour);
+
                 Session.fermer();
                 item.setChecked(true);
                 break;

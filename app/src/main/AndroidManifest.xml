@@ -21,6 +21,7 @@
         <activity android:name=".ResultatRapportActivity"/>
         <activity android:name=".SaisirRapportActivity"/>
         <activity android:name=".EchantillonActivity"/>
+        <activity android:name=".ModifierMdpActivity"/>
     </application>
 
 </manifest>

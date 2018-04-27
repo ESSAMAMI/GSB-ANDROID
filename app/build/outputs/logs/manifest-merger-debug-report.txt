@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c0526458fdebe20a4bb341bc945b037e\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.volley:volley:1.0.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\c52989b7a8a923e6f10f572f89418a8f\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\edceae0907ae4394025549eb3cf14db1\AndroidManifest.xml:17:1-31:12
@@ -19,20 +19,20 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Electro Dep
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\9d61cc2d5c9581d2d6d76eb37f3e1085\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\311ade9dd8959b0b047212de0fd4576c\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\df6aa50574b6236013f9dcd24c799e24\AndroidManifest.xml:17:1-30:12
-INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml
 		INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml
-		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml
-		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:1-27:12
 		INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:2:11-69
@@ -45,7 +45,7 @@ ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:5:5-66
 	android:name
 		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:6:5-24:19
+ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:6:5-25:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c0526458fdebe20a4bb341bc945b037e\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\c0526458fdebe20a4bb341bc945b037e\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.volley:volley:1.0.0] C:\Users\Electro Depot\.gradle\caches\transforms-1\files-1.1\volley-1.0.0.aar\c52989b7a8a923e6f10f572f89418a8f\AndroidManifest.xml:9:5-20
@@ -122,6 +122,10 @@ activity#fr.gsb.gsb_rv_visiteur.EchantillonActivity
 ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:23:9-56
 	android:name
 		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:23:19-54
+activity#fr.gsb.gsb_rv_visiteur.ModifierMdpActivity
+ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:24:9-56
+	android:name
+		ADDED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml:24:19-54
 uses-sdk
 INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\2017\SLAM5\workspace\app\src\main\AndroidManifest.xml

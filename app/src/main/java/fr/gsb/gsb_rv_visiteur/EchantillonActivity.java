@@ -191,7 +191,7 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
                                 AlertDialog.Builder dBuilder = new AlertDialog.Builder(EchantillonActivity.this);
                                 dBuilder.setIcon(R.drawable.ic_info_outline_black_24dp);
                                 dBuilder.setTitle(" SUCCÈS");
-                                dBuilder.setMessage("Le rapport a été enrgistré avec succès ☺");
+                                dBuilder.setMessage("Le rapport a été enregistré avec succès ☺");
 
                                 dBuilder.show();
                             }
@@ -250,21 +250,34 @@ public class EchantillonActivity extends AppCompatActivity implements Navigation
         switch (item.getItemId()){
 
             case R.id.nav_consulter:
+
                 Intent consulter = new Intent(this, ConsulterActivity.class);
                 startActivity(consulter);
 
                 item.setChecked(true);
                 break;
+
             case R.id.nav_saisir:
+
                 Intent saisir = new Intent(this, SaisirRapportActivity.class);
                 startActivity(saisir);
 
                 item.setChecked(true);
                 break;
 
+            case R.id.nav_mdp:
+
+                Intent mdp = new Intent(this, ModifierMdpActivity.class);
+                startActivity(mdp);
+
+                item.setChecked(true);
+                break;
+
             case R.id.nav_logout:
+
                 Intent retour = new Intent(this, MainActivity.class);
                 startActivity(retour);
+
                 Session.fermer();
                 item.setChecked(true);
                 break;

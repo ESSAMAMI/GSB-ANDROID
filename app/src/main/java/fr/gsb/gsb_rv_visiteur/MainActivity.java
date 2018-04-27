@@ -52,12 +52,11 @@ public class MainActivity extends Activity {
         matricule = (EditText)findViewById(R.id.matricule);
         mdp = (EditText)findViewById(R.id.mdp);
 
-
     }
 
     public void Connexion(View v) throws UnsupportedEncodingException {
 
-        String auth = matricule.getText().toString().trim() +'.'+mdp.getText().toString().trim();
+        String auth = matricule.getText().toString().trim() +'.'+String.valueOf(mdp.getText().toString().trim());
         final String visi = URLEncoder.encode(auth, "UTF-8");
         String url = String.format(getResources().getString(R.string.ipConnexion), visi);
 
