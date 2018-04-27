@@ -105,13 +105,32 @@ public class ModifierMdpActivity extends AppCompatActivity implements Navigation
                         Session.getSession().getLeVisiteur().setMdp(stringNew);
                         //Toast.makeText(ModifierMdpActivity.this, response, Toast.LENGTH_LONG).show();
 
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(ModifierMdpActivity.this);
+                        mBuilder.setTitle("SUCCES").setMessage("Le mot de passe a été modifié avec succès. ☺");
+                        mBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
+                        mBuilder.setIcon(R.drawable.ic_info_outline_black_24dp).create().show();
+
                     }
 
                 };
                  Response.ErrorListener errorListenerUpdate = new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(ModifierMdpActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(ModifierMdpActivity.this);
+                        mBuilder.setTitle("ERREUR").setMessage("Une erreur est survenue. Veuillez recommencer...");
+                        mBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        });
+                        mBuilder.setIcon(R.drawable.ic_info_outline_black_24dp).create().show();
                     }
                 };
                      StringRequest stringRequest = new StringRequest(Request.Method.POST, url, ecouteurUpdate, errorListenerUpdate);
