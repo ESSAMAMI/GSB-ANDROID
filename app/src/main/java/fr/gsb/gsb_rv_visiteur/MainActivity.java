@@ -69,10 +69,14 @@ public class MainActivity extends Activity {
                     Visiteur visiteur = new Visiteur();
                     visiteur.setNom(response.getString("nom"));
                     visiteur.setPrenom(response.getString("prenom"));
+                    visiteur.setMdp(response.getString("mdp"));
+                    visiteur.setMatricule(response.getString("matricule"));
 
-                    Session.ouvrir(response.getString("matricule"), response.getString("mdp"));
+                    Session.ouvrir(response.getString("matricule"), response.getString("mdp"), visiteur);
                     Intent i = new Intent(MainActivity.this, AccueilActivity.class);
                     startActivity(i);
+
+                    //Toast.makeText(MainActivity.this, response.getString("matricule")+' '+response.getString("mdp"), Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -103,6 +107,8 @@ public class MainActivity extends Activity {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, ecouteur,errorListener);
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
         requestQueue.add(jsonObjectRequest);
+
+
     }
 
     public void effacer(View v){

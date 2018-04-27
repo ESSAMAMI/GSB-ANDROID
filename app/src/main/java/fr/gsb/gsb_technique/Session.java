@@ -12,8 +12,9 @@ public class Session {
 		this.leVisiteur = leVisiteur ;
 	}
 	
-	public static boolean ouvrir(String matricule, String mdp){
-		Visiteur visiteur = ModeleGsb.getInstance().seConnecter(matricule, mdp) ;
+	public static boolean ouvrir(String matricule, String mdp, Visiteur visiteur){
+
+		//Visiteur visiteur = ModeleGsb.getInstance().seConnecter(matricule, mdp) ;
 		if( visiteur != null ){
 			Session.session = new Session( visiteur ) ;
 			return true ;

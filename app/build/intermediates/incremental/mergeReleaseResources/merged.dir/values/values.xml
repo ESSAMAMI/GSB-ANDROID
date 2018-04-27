@@ -809,6 +809,7 @@
     <string name="ipPost">http://192.168.1.36:5000/InsertRv</string>
     <string name="ipRap">http://192.168.1.36:5000/rapport/%s</string>
     <string name="ipResuRap">http://192.168.1.36:5000/rapport/estLu/%s</string>
+    <string name="mdp">http://192.168.1.36:5000/Mdp/%s</string>
     <string name="offrir">http://192.168.1.36:5000/InsertOffrir</string>
     <string name="open">Open</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>

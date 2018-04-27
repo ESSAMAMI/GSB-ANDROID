@@ -43,8 +43,6 @@ public class AccueilActivity extends AppCompatActivity implements NavigationView
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         sliderAdapter = new SliderAdapter(AccueilActivity.this);
         viewPager.setAdapter(sliderAdapter);
-
-
         /*Session*/
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigationView);
