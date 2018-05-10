@@ -49,4 +49,6 @@
     <string name="offrir">http://192.168.1.36:5000/InsertOffrir</string>
     <string name="echantillon">http://192.168.1.36:5000/Echantillons/%s</string>
     <string name="mdp">http://192.168.1.36:5000/Mdp/%s</string>
+
+
 </resources>
